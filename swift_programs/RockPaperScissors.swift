@@ -46,3 +46,10 @@ func determineWinner(_ userChoice: String, _ compChoice: String) -> String {
   }
   return decision
 }
+
+let userChoice = getUserChoice(userInput: "rock")
+let compChoice = getComputerChoice()
+
+print("You threw \(userChoice)")
+print("The computer threw \(compChoice)")
+print(determineWinner(userChoice, compChoice))
