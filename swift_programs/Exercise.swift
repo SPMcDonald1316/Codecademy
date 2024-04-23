@@ -22,6 +22,14 @@ struct Regimen {
     self.dayOfWeek = dayOfWeek
     self.exercises = exercises
   }
+
+  func printExercisePlan() {
+    print("Today is \(self.dayOfWeek) and the plan is to:")
+    for exercise in self.exercises {
+      print("Do \(exercise.sets) sets of \(exercise.reps) \(exercise.name)")
+      print("That's a total of \(exercise.totalReps) \(exercise.name)")
+    }
+  }
 }
 
 var pushUp = Exercise(name: "Push up", muscleGroups: ["Triceps", "Chest", "Shoulders"], reps: 10, sets: 3)
