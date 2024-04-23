@@ -10,5 +10,6 @@ struct Exercise {
     self.muscleGroups = muscleGroups
     self.reps = reps
     self.sets = sets
+    self.totalReps = reps * sets
   }
 }
