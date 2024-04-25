@@ -3,8 +3,9 @@ struct SwiftBank {
   private var balance: Double = 0
   static let depositBonusRate = 0.01
 
-  init(password: String) {
+  init(password: String, initialDeposit: Double) {
     self.password = password
+    makeDeposit(depositAmount: initialDeposit)
   }
 
   private func isValid(_ enteredPassword: String) -> Bool {
