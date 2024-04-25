@@ -30,4 +30,14 @@ struct SwiftBank {
       return
     }
   }
+
+  mutating func makeWithdrawal(withdrawalAmount: Double, password: String) {
+    if isValid(password) {
+      balance -= withdrawalAmount
+      print("Making a $\(withdrawalAmount) withdrawal.")
+    } else {
+      print("Error: Invalid password. Cannot retrieve balance.")
+      return
+    }
+  }
 }
