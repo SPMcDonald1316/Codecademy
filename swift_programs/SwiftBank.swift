@@ -49,3 +49,12 @@ struct SwiftBank {
     }
   }
 }
+
+// Test code
+var myAccount = SwiftBank(password: "password", initialDeposit: 500.00)
+myAccount.makeDeposit(depositAmount: 50)
+
+// password validation
+myAccount.makeWithdrawal(withdrawalAmount: 100, password: "hello")
+myAccount.makeWithdrawal(withdrawalAmount: 100, password: "password")
+myAccount.displayBalance(password: "password")
