@@ -21,4 +21,13 @@ struct SwiftBank {
     print("Making a deposit of $\(depositAmount) with a bonus rate. The final amount deposited is $\(depositWithBonus)")
     self.balance += depositWithBonus
   }
+
+  func displayBalance(password: String) {
+    if isValid(password) {
+      print("Your current balance is $\(balance)")
+    } else {
+      print("Error: Invalid password. Cannot retrieve balance.")
+      return
+    }
+  }
 }
