@@ -26,14 +26,19 @@ struct SwiftBank {
   }
 
   mutating func makeDeposit(depositAmount: Double) {
-    if depositAmount >= 1000 && firstThousandDeposit {
-      let depositWithBonus = finalDepositWithBonus(deposit: depositAmount)
-      print("Making a deposit of $\(depositAmount) with a bonus rate. The final amount deposited is $\(depositWithBonus)")
-      balance += depositWithBonus
-      firstThousandDeposit = false
+    if depositAmount > 0 {
+      if depositAmount >= 1000 && firstThousandDeposit {
+        let depositWithBonus = finalDepositWithBonus(deposit: depositAmount)
+        print("Making a deposit of $\(depositAmount) with a bonus rate. The final amount deposited is $\(depositWithBonus)")
+        balance += depositWithBonus
+        firstThousandDeposit = false
+      } else {
+        print("Making a deposit of $\(depositAmount)")
+        balance += depositAmount
+      }
     } else {
-      print("Making a deposit of $\(depositAmount)")
-      balance += depositAmount
+      print("Error: Invalid deposit amount.")
+      return
     }
   }
 
