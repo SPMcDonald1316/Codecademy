@@ -5,6 +5,7 @@ struct SwiftBank {
       if balance < 100 { displayLowBalanceMessage() }
     }
   }
+  private var firstThousandDeposit = true
   static let depositBonusRate = 0.01
 
   init(password: String, initialDeposit: Double) {
@@ -25,9 +26,15 @@ struct SwiftBank {
   }
 
   mutating func makeDeposit(depositAmount: Double) {
-    let depositWithBonus = finalDepositWithBonus(deposit: depositAmount)
-    print("Making a deposit of $\(depositAmount) with a bonus rate. The final amount deposited is $\(depositWithBonus)")
-    self.balance += depositWithBonus
+    if depositAmount >= 1000 && firstThousandDeposit {
+      let depositWithBonus = finalDepositWithBonus(deposit: depositAmount)
+      print("Making a deposit of $\(depositAmount) with a bonus rate. The final amount deposited is $\(depositWithBonus)")
+      balance += depositWithBonus
+      firstThousandDeposit = false
+    } else {
+      print("Making a deposit of $\(depositAmount)")
+      balance += depositAmount
+    }
   }
 
   func displayBalance(password: String) {
