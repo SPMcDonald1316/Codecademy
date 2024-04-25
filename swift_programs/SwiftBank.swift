@@ -1,6 +1,10 @@
 struct SwiftBank {
   private let password: String
-  private var balance: Double = 0
+  private var balance: Double = 0 {
+    didSet {
+      if balance < 100 { displayLowBalanceMessage() }
+    }
+  }
   static let depositBonusRate = 0.01
 
   init(password: String, initialDeposit: Double) {
@@ -14,6 +18,10 @@ struct SwiftBank {
 
   private func finalDepositWithBonus(deposit: Double) -> Double {
     return deposit + (deposit * SwiftBank.depositBonusRate)
+  }
+
+  private func displayLowBalanceMessage() {
+    print("Alert: Your balance is under $100")
   }
 
   mutating func makeDeposit(depositAmount: Double) {
