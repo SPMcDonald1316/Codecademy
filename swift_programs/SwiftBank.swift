@@ -14,4 +14,10 @@ struct SwiftBank {
   private func finalDepositWithBonus(deposit: Double) -> Double {
     return deposit + (deposit * SwiftBank.depositBonusRate)
   }
+
+  mutating func makeDeposit(depositAmount: Double) {
+    let depositWithBonus = finalDepositWithBonus(deposit: depositAmount)
+    print("Making a deposit of $\(depositAmount) with a bonus rate. The final amount deposited is $\(depositWithBonus)")
+    self.balance += depositWithBonus
+  }
 }
