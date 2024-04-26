@@ -11,3 +11,7 @@ class Pokemon {
     self.ability = ability
   }
 }
+
+var bulbasaur = Pokemon(num: 1, name: "Bulbasaur", type: ["Grass", "Poison"], ability: ["Overgrow"])
+var charmander = Pokemon(num: 4, name: "Charmander", type: ["Fire"], ability: ["Blaze"])
+var squirtle = Pokemon(num: 7, name: "Squirtle", type: ["Water"], ability: ["Torrent"])
