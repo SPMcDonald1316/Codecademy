@@ -11,6 +11,7 @@
 		146F4B202BDC80A600DCA313 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F4B1F2BDC80A600DCA313 /* ContentView.swift */; };
 		146F4B222BDC80A700DCA313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146F4B212BDC80A700DCA313 /* Assets.xcassets */; };
 		146F4B252BDC80A700DCA313 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146F4B242BDC80A700DCA313 /* Preview Assets.xcassets */; };
+		146F4B2C2BDC849B00DCA313 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F4B2B2BDC849B00DCA313 /* ItemDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		146F4B1F2BDC80A600DCA313 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		146F4B212BDC80A700DCA313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		146F4B242BDC80A700DCA313 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		146F4B2B2BDC849B00DCA313 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				146F4B1D2BDC80A600DCA313 /* Intro_To_NavagationApp.swift */,
 				146F4B1F2BDC80A600DCA313 /* ContentView.swift */,
+				146F4B2B2BDC849B00DCA313 /* ItemDetailView.swift */,
 				146F4B212BDC80A700DCA313 /* Assets.xcassets */,
 				146F4B232BDC80A700DCA313 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146F4B2C2BDC849B00DCA313 /* ItemDetailView.swift in Sources */,
 				146F4B202BDC80A600DCA313 /* ContentView.swift in Sources */,
 				146F4B1E2BDC80A600DCA313 /* Intro_To_NavagationApp.swift in Sources */,
 			);
