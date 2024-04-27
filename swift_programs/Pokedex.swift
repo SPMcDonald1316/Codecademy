@@ -26,6 +26,14 @@ class GigantamaxPokemon: Pokemon {
     super.init(num: num, name: name, type: type, ability: ability)
     self.location = location
   }
+
+  override func displayInfo() {
+    print("Number:   \(num)")
+    print("Name:     \(name)")
+    print("Type:     \(type)")
+    print("Ability:  \(ability)")
+    print("Location: \(location)\n")
+  }
 }
 
 var bulbasaur = Pokemon(num: 1, name: "Bulbasaur", type: ["Grass", "Poison"], ability: ["Overgrow"])
@@ -37,3 +45,4 @@ charmander.displayInfo()
 squirtle.displayInfo()
 
 var charizard = GigantamaxPokemon(num: 6, name: "Charizard", type: ["Fire"], ability: ["Blaze"], location: "Lake of Outrage")
+charizard.displayInfo()
