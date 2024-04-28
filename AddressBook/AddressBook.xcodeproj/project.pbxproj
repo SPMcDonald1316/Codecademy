@@ -12,6 +12,7 @@
 		14B1100A2BDEFCC100338564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B110092BDEFCC100338564 /* Assets.xcassets */; };
 		14B1100D2BDEFCC100338564 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B1100C2BDEFCC100338564 /* Preview Assets.xcassets */; };
 		14B110152BDEFFC700338564 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B110142BDEFFC700338564 /* ContactsView.swift */; };
+		14B110182BDF036800338564 /* AddressBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B110172BDF036800338564 /* AddressBookViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		14B110092BDEFCC100338564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14B1100C2BDEFCC100338564 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14B110142BDEFFC700338564 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		14B110172BDF036800338564 /* AddressBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				14B110052BDEFCC100338564 /* AddressBookApp.swift */,
 				14B110132BDEFE5F00338564 /* Views */,
+				14B110162BDF033600338564 /* ViewModel */,
 				14B110092BDEFCC100338564 /* Assets.xcassets */,
 				14B1100B2BDEFCC100338564 /* Preview Content */,
 			);
@@ -76,6 +79,14 @@
 				14B110142BDEFFC700338564 /* ContactsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		14B110162BDF033600338564 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				14B110172BDF036800338564 /* AddressBookViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			files = (
 				14B110152BDEFFC700338564 /* ContactsView.swift in Sources */,
 				14B110082BDEFCC100338564 /* AddressBookView.swift in Sources */,
+				14B110182BDF036800338564 /* AddressBookViewModel.swift in Sources */,
 				14B110062BDEFCC100338564 /* AddressBookApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
