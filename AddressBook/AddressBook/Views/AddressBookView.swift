@@ -2,8 +2,9 @@
 //  ContentView.swift
 //  AddressBook
 //
-//  Created by Sean McDonald on 4/28/24.
-//
+//  Originally Created by Ben Stone (Codecademy)
+//  All code written and completed by Sean McDonald following iOS Development tutorial on Codecademy.
+
 
 import SwiftUI
 
