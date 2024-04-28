@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		145605212BDEE5E300AD4498 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145605202BDEE5E300AD4498 /* WelcomeView.swift */; };
 		145605232BDEE99400AD4498 /* GameColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145605222BDEE99400AD4498 /* GameColor.swift */; };
+		145605252BDEEBBA00AD4498 /* BottomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145605242BDEEBBA00AD4498 /* BottomTextView.swift */; };
 		149876482BDAFE4600C97FFF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149876472BDAFE4600C97FFF /* Game.swift */; };
 		14A722492BD8643F008C1245 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A722482BD8643F008C1245 /* Question.swift */; };
 		14A7224D2BD867CE008C1245 /* ChoiceTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A7224C2BD867CE008C1245 /* ChoiceTextView.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		145605202BDEE5E300AD4498 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		145605222BDEE99400AD4498 /* GameColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameColor.swift; sourceTree = "<group>"; };
+		145605242BDEEBBA00AD4498 /* BottomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTextView.swift; sourceTree = "<group>"; };
 		149876472BDAFE4600C97FFF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		14A722482BD8643F008C1245 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		14A7224C2BD867CE008C1245 /* ChoiceTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceTextView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				14A7224C2BD867CE008C1245 /* ChoiceTextView.swift */,
+				145605242BDEEBBA00AD4498 /* BottomTextView.swift */,
 				14B0FE7C2BC7417B0011AEDE /* GameView.swift */,
 				145605202BDEE5E300AD4498 /* WelcomeView.swift */,
 				145605222BDEE99400AD4498 /* GameColor.swift */,
@@ -172,6 +175,7 @@
 				145605212BDEE5E300AD4498 /* WelcomeView.swift in Sources */,
 				149876482BDAFE4600C97FFF /* Game.swift in Sources */,
 				14B0FE7D2BC7417B0011AEDE /* GameView.swift in Sources */,
+				145605252BDEEBBA00AD4498 /* BottomTextView.swift in Sources */,
 				145605232BDEE99400AD4498 /* GameColor.swift in Sources */,
 				14A7224D2BD867CE008C1245 /* ChoiceTextView.swift in Sources */,
 				14B0FE7B2BC7417B0011AEDE /* Code_HistoryApp.swift in Sources */,
