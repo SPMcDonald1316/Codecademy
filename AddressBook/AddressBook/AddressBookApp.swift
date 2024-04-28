@@ -2,8 +2,8 @@
 //  AddressBookApp.swift
 //  AddressBook
 //
-//  Created by Sean McDonald on 4/28/24.
-//
+//  Created by Ben Stone.
+//  Code written and completed by Sean McDonald following iOS Development path on Codecademy
 
 import SwiftUI
 
