@@ -14,6 +14,7 @@
 		14B110152BDEFFC700338564 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B110142BDEFFC700338564 /* ContactsView.swift */; };
 		14B110182BDF036800338564 /* AddressBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B110172BDF036800338564 /* AddressBookViewModel.swift */; };
 		14B1101B2BDF052700338564 /* AddressBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1101A2BDF052700338564 /* AddressBook.swift */; };
+		14B1101D2BDF06F600338564 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1101C2BDF06F600338564 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		14B110142BDEFFC700338564 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		14B110172BDF036800338564 /* AddressBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookViewModel.swift; sourceTree = "<group>"; };
 		14B1101A2BDF052700338564 /* AddressBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBook.swift; sourceTree = "<group>"; };
+		14B1101C2BDF06F600338564 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				14B1101A2BDF052700338564 /* AddressBook.swift */,
+				14B1101C2BDF06F600338564 /* Contact.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B1101D2BDF06F600338564 /* Contact.swift in Sources */,
 				14B110152BDEFFC700338564 /* ContactsView.swift in Sources */,
 				14B110082BDEFCC100338564 /* AddressBookView.swift in Sources */,
 				14B110182BDF036800338564 /* AddressBookViewModel.swift in Sources */,
