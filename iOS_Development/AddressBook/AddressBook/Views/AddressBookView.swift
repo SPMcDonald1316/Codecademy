@@ -9,8 +9,7 @@
 import SwiftUI
 
 struct AddressBookView: View {
-    // TODO: STATEOBJECT - Add propery wrapper to viewModel so that it observes changes
-    private var viewModel = AddressBookViewModel()
+    @StateObject private var viewModel = AddressBookViewModel()
     
     @State private var displayFavoriteCount = true
     
