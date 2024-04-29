@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		141E4DF32BE0404400C2D342 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E4DF22BE0404400C2D342 /* GameViewModel.swift */; };
+		141E4DF52BE043E000C2D342 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E4DF42BE043E000C2D342 /* QuestionView.swift */; };
 		145605212BDEE5E300AD4498 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145605202BDEE5E300AD4498 /* WelcomeView.swift */; };
 		145605232BDEE99400AD4498 /* GameColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145605222BDEE99400AD4498 /* GameColor.swift */; };
 		145605252BDEEBBA00AD4498 /* BottomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145605242BDEEBBA00AD4498 /* BottomTextView.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		141E4DF22BE0404400C2D342 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		141E4DF42BE043E000C2D342 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		145605202BDEE5E300AD4498 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		145605222BDEE99400AD4498 /* GameColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameColor.swift; sourceTree = "<group>"; };
 		145605242BDEEBBA00AD4498 /* BottomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTextView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				14B0FE7C2BC7417B0011AEDE /* GameView.swift */,
 				145605202BDEE5E300AD4498 /* WelcomeView.swift */,
 				145605222BDEE99400AD4498 /* GameColor.swift */,
+				141E4DF42BE043E000C2D342 /* QuestionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141E4DF52BE043E000C2D342 /* QuestionView.swift in Sources */,
 				141E4DF32BE0404400C2D342 /* GameViewModel.swift in Sources */,
 				14A722492BD8643F008C1245 /* Question.swift in Sources */,
 				145605212BDEE5E300AD4498 /* WelcomeView.swift in Sources */,
