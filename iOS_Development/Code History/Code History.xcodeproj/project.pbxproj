@@ -103,9 +103,9 @@
 		14B0FE792BC7417B0011AEDE /* Code History */ = {
 			isa = PBXGroup;
 			children = (
-				141E4DF12BE0402E00C2D342 /* ViewModels */,
 				149876492BDAFE7700C97FFF /* Models */,
 				1498764A2BDAFEA900C97FFF /* Views */,
+				141E4DF12BE0402E00C2D342 /* ViewModels */,
 				14B0FE7A2BC7417B0011AEDE /* Code_HistoryApp.swift */,
 				14B0FE7E2BC7417C0011AEDE /* Assets.xcassets */,
 				14B0FE802BC7417C0011AEDE /* Preview Content */,

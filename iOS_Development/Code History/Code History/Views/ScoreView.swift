@@ -40,5 +40,5 @@ struct ScoreView: View {
 }
 
 #Preview {
-  ScoreView(viewModel: ScoreViewModel(correctGuesses: 8, incorrectGuesses: 2))
+  ScoreView(viewModel: ScoreViewModel)
 }
