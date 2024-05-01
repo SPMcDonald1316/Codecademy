@@ -8,9 +8,11 @@
 import Foundation
 
 struct Game {
+  
   private(set) var currentQuestionIndex = 0
   private(set) var guesses = [Question: Int]()
   private(set) var isOver = false
+  
   private let questions = Question.allQuestions.shuffled()
     
   var guessCount: (correct: Int, incorrect: Int) {
