@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct QuestionView: View {
-  
   @EnvironmentObject var viewModel: GameViewModel
   let question: Question
 
@@ -42,4 +41,5 @@ struct QuestionView: View {
 
 #Preview {
   QuestionView(question: Game().currentQuestion)
+    .environmentObject(GameViewModel())
 }
