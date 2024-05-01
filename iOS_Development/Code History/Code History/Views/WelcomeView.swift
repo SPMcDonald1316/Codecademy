@@ -23,6 +23,7 @@ struct WelcomeView: View {
               .padding()
           }
           Spacer()
+          Spacer()
           NavigationLink(
             destination: GameView(),
             label: {
