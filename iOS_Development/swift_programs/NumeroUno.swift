@@ -11,3 +11,20 @@ enum ProductType: String, CaseIterable {
     }
   }
 }
+
+enum Edition: String {
+  case basic = "Basic"
+  case premium = "Premium"
+  case ultimate = "Ultimate"
+
+  mutating func upgrade() {
+    switch self {
+      case .basic:
+        self = .premium
+      case .premium:
+        self = .ultimate
+      case .ultimate:
+        print("Can't upgrade further")
+    }
+  }
+}
