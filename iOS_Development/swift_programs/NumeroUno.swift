@@ -42,3 +42,18 @@ enum DeliveryMethod {
     }
   }
 }
+
+func sendOrderConfirmation(of productType: ProductType, in edition: Edition, by deliveryMethod: DeliveryMethod) {
+  print("Thank you for purchasing the \(edition.rawValue) edition of \(productType.rawValue)")
+
+  switch deliveryMethod {
+    case .shipping:
+      print("Your order will be shipped to you at a cost of \(deliveryMethod.shippingCost)")
+    case .cloudDigital(let isLifetime):
+      if isLifetime {
+        print("You have lifetime cloud access")
+      } else {
+        print("You can access your subscription information on the cloud")
+      }
+  }
+}
