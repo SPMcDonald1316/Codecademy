@@ -57,3 +57,10 @@ func sendOrderConfirmation(of productType: ProductType, in edition: Edition, by 
       }
   }
 }
+
+ProductType.displayProductOfferings()
+
+var myEdition = Edition.basic
+myEdition.upgrade()
+
+sendOrderConfirmation(of: ProductType.aceRepository, in: myEdition, by: DeliveryMethod.shipping(weight: 1))
