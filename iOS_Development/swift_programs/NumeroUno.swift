@@ -28,3 +28,17 @@ enum Edition: String {
     }
   }
 }
+
+enum DeliveryMethod {
+  case cloudDigital(isLifetime: Bool)
+  case shipping(weight: Int)
+
+  var shippingCost: Int {
+    switch self {
+      case .cloudDigital:
+        return 0
+      case .shipping(let weight):
+        return weight * 2
+    }
+  }
+}
