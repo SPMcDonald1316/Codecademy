@@ -31,10 +31,19 @@ struct Ingredient {
   var name: String
   var quantity: Double
   var unit: String // Ounces, Grams, Cups etc...
+  
+  enum Unit: String, CaseIterable {
+    case oz = "Ounces"
+    case g = "Grams"
+    case cups = "Cups"
+    case tbs = "Tablespoons"
+    case tsp = "Teaspoons"
+    case none = "No units"
+  }
 }
 
 struct Direction {
   var description: String
-  var isOptional: Bool"
+  var isOptional: Bool
 }
 
