@@ -15,6 +15,7 @@
 		147D47952BF46A3000589379 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D47942BF46A3000589379 /* RecipeData.swift */; };
 		147D47972BF46F2300589379 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D47962BF46F2300589379 /* RecipeDetailView.swift */; };
 		147D47992BF4765500589379 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D47982BF4765500589379 /* AppColor.swift */; };
+		147D479B2BF4796000589379 /* RecipeCategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D479A2BF4796000589379 /* RecipeCategoryGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		147D47942BF46A3000589379 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
 		147D47962BF46F2300589379 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		147D47982BF4765500589379 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		147D479A2BF4796000589379 /* RecipeCategoryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				141147152BF31CD200A11212 /* RecipesListView.swift */,
 				147D47962BF46F2300589379 /* RecipeDetailView.swift */,
+				147D479A2BF4796000589379 /* RecipeCategoryGridView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			files = (
 				141147242BF3219500A11212 /* Recipe.swift in Sources */,
 				147D47972BF46F2300589379 /* RecipeDetailView.swift in Sources */,
+				147D479B2BF4796000589379 /* RecipeCategoryGridView.swift in Sources */,
 				147D47952BF46A3000589379 /* RecipeData.swift in Sources */,
 				141147162BF31CD200A11212 /* RecipesListView.swift in Sources */,
 				141147142BF31CD200A11212 /* CookcademyApp.swift in Sources */,
