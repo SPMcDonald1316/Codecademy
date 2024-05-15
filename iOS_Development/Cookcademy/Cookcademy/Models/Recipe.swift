@@ -83,7 +83,7 @@ struct Direction {
 extension Recipe {
     static let testRecipes: [Recipe] = [
         Recipe(mainInformation: MainInformation(
-            name: "Dad's Masshed Potatoes",
+            name: "Dad's Mashed Potatoes",
             description: "Buttery salty mashed potatoes!",
             author: "Josh",
             category: .dinner),
@@ -95,7 +95,7 @@ extension Recipe {
                ],
                directions: [
                 Direction(description: "Put peeled potatoes in water and bring to boil ~15 min (once you can cut them easily", isOptional: false),
-                Direction(description: "In the meantime, Soften the butter by heading in a microwave for 30 seconds", isOptional: false),
+                Direction(description: "In the meantime, Soften the butter by heating in a microwave for 30 seconds", isOptional: false),
                 Direction(description: "Drain the now soft potatoes", isOptional: false),
                 Direction(description: "Mix vigorously with milk, salt, and butter", isOptional: false)
                ]

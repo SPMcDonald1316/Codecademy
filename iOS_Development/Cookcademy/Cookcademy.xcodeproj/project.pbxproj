@@ -13,6 +13,7 @@
 		1411471B2BF31CD300A11212 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1411471A2BF31CD300A11212 /* Preview Assets.xcassets */; };
 		141147242BF3219500A11212 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141147232BF3219500A11212 /* Recipe.swift */; };
 		147D47952BF46A3000589379 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D47942BF46A3000589379 /* RecipeData.swift */; };
+		147D47972BF46F2300589379 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D47962BF46F2300589379 /* RecipeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		1411471A2BF31CD300A11212 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		141147232BF3219500A11212 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		147D47942BF46A3000589379 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
+		147D47962BF46F2300589379 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				141147152BF31CD200A11212 /* RecipesListView.swift */,
+				147D47962BF46F2300589379 /* RecipeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				141147242BF3219500A11212 /* Recipe.swift in Sources */,
+				147D47972BF46F2300589379 /* RecipeDetailView.swift in Sources */,
 				147D47952BF46A3000589379 /* RecipeData.swift in Sources */,
 				141147162BF31CD200A11212 /* RecipesListView.swift in Sources */,
 				141147142BF31CD200A11212 /* CookcademyApp.swift in Sources */,
