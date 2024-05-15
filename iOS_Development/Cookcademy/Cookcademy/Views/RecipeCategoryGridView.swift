@@ -34,6 +34,7 @@ struct CategoryView: View {
             Image(category.rawValue)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .opacity(0.35)
             Text(category.rawValue)
                 .font(.title)
         }
