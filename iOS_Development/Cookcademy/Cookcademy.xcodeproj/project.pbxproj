@@ -57,7 +57,6 @@
 				147D47912BF4667B00589379 /* Views */,
 				147D47922BF4668A00589379 /* Models */,
 				141147132BF31CD200A11212 /* CookcademyApp.swift */,
-				141147152BF31CD200A11212 /* RecipesListView.swift */,
 				141147172BF31CD300A11212 /* Assets.xcassets */,
 				141147192BF31CD300A11212 /* Preview Content */,
 			);
@@ -75,6 +74,7 @@
 		147D47912BF4667B00589379 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				141147152BF31CD200A11212 /* RecipesListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
