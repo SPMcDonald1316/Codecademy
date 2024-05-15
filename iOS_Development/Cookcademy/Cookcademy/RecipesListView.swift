@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  RecipesListView.swift
 //  Cookcademy
 //
 //  Created by Sean McDonald on 5/13/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct RecipesListView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +20,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    RecipesListView()
 }
