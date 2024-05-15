@@ -12,12 +12,16 @@ struct RecipesListView: View {
     
     var body: some View {
         List {
-            
+            ForEach(recipeData.recipes) { recipe in
+                Text(recipe.mainInformation.name)
+            }
         }
         .navigationTitle("All Recipes")
     }
 }
 
 #Preview {
-    RecipesListView()
+    NavigationView {
+        RecipesListView()
+    }
 }
