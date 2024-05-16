@@ -79,12 +79,28 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		147D47912BF4667B00589379 /* Views */ = {
+		143DAB882BF6587500A23E78 /* ExploreRecipes */ = {
 			isa = PBXGroup;
 			children = (
 				141147152BF31CD200A11212 /* RecipesListView.swift */,
 				147D47962BF46F2300589379 /* RecipeDetailView.swift */,
 				147D479A2BF4796000589379 /* RecipeCategoryGridView.swift */,
+			);
+			path = ExploreRecipes;
+			sourceTree = "<group>";
+		};
+		143DAB892BF6589500A23E78 /* ModifyRecipes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModifyRecipes;
+			sourceTree = "<group>";
+		};
+		147D47912BF4667B00589379 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				143DAB892BF6589500A23E78 /* ModifyRecipes */,
+				143DAB882BF6587500A23E78 /* ExploreRecipes */,
 			);
 			path = Views;
 			sourceTree = "<group>";
