@@ -25,7 +25,9 @@ struct ModifyRecipeView: View {
     }
 }
 
-#Preview {
+struct ModifyRecipeView_Previews: PreviewProvider {
     @State static var recipe = Recipe()
-    ModifyRecipeView(recipe: $recipe)
+    static var previews: some View {
+        ModifyRecipeView(recipe: $recipe)
+    }
 }
