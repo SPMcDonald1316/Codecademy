@@ -39,10 +39,3 @@ struct ModifyRecipeView: View {
     case directions
   }
 }
-
-struct ModifyRecipeView_Previews: PreviewProvider {
-  @State static var recipe = Recipe()
-  static var previews: some View {
-    ModifyRecipeView(recipe: $recipe)
-  }
-}
