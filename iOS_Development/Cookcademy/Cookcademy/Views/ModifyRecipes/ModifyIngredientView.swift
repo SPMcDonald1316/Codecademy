@@ -11,6 +11,8 @@ struct ModifyIngredientView: View {
   @Binding var ingredient: Ingredient
   let createAction: ((Ingredient) -> Void)
   
+  @Environment(\.presentationMode) private var mode
+  
   var body: some View {
     Form {
       TextField("Ingredient Name", text: $ingredient.name)
@@ -38,6 +40,7 @@ struct ModifyIngredientView: View {
         Spacer()
         Button("Save") {
           createAction(ingredient)
+          mode.wrappedValue.dismiss()
         }
         Spacer()
       }
