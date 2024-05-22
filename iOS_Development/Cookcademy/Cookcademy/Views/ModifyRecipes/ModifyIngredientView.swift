@@ -8,32 +8,38 @@
 import SwiftUI
 
 struct ModifyIngredientView: View {
-  @State var ingredient: Ingredient
+  @Binding var ingredient: Ingredient
+  let createAction: ((Ingredient) -> Void)
   
   var body: some View {
-    VStack {
-      Form {
-        TextField("Ingredient Name", text: $ingredient.name)
-        Stepper(value: $ingredient.quantity, in: 0...100, step: 0.5) {
-          HStack {
-            Text("Quantity:")
-            TextField("Quantity",
-                      value: $ingredient.quantity,
-                      formatter: NumberFormatter.decimal)
-            .keyboardType(.numbersAndPunctuation)
-          }
+    Form {
+      TextField("Ingredient Name", text: $ingredient.name)
+      Stepper(value: $ingredient.quantity, in: 0...100, step: 0.5) {
+        HStack {
+          Text("Quantity:")
+          TextField("Quantity",
+                    value: $ingredient.quantity,
+                    formatter: NumberFormatter.decimal)
+          .keyboardType(.numbersAndPunctuation)
         }
-        Picker(selection: $ingredient.unit, label:
-                HStack {
-                  Text("Unit")
-                  Spacer()
-                  Text(ingredient.unit.rawValue)
-                }) {
-          ForEach(Ingredient.Unit.allCases, id: \.self) { unit in
-            Text(unit.rawValue)
-          }
+      }
+      Picker(selection: $ingredient.unit, label:
+              HStack {
+        Text("Unit")
+        Spacer()
+        Text(ingredient.unit.rawValue)
+      }) {
+        ForEach(Ingredient.Unit.allCases, id: \.self) { unit in
+          Text(unit.rawValue)
         }
-        .pickerStyle(MenuPickerStyle())
+      }
+      .pickerStyle(MenuPickerStyle())
+      HStack {
+        Spacer()
+        Button("Save") {
+          createAction(ingredient)
+        }
+        Spacer()
       }
     }
   }
@@ -49,5 +55,5 @@ extension NumberFormatter {
 
 #Preview {
   @State var emptyIngredient = Ingredient(name: "", quantity: 1.0, unit: .none)
-  return ModifyIngredientView(ingredient: emptyIngredient)
+  return ModifyIngredientView(ingredient: $emptyIngredient) { ingredient in print(ingredient) }
 }
