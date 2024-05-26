@@ -16,7 +16,7 @@ protocol ModifyComponentView: View {
   init(component: Binding<Component>, createAction: @escaping(Component) -> Void)
 }
 
-struct ModifyComponentsView: View {
+struct ModifyComponentsView<Component: RecipeComponent, DestinationView: ModifyComponentView>: View {
   @Binding var ingredients: [Ingredient]
   @State private var newIngredient = Ingredient()
   
@@ -52,5 +52,7 @@ struct ModifyComponentsView: View {
 
 #Preview {
   @State var emptyIngredients = [Ingredient]()
-  return ModifyComponentsView(ingredients: $emptyIngredients)
+  return NavigationView {
+    ModifyComponentsView<Ingredient, ModifyIngredientView>(ingredients: $emptyIngredients)
+  }
 }
