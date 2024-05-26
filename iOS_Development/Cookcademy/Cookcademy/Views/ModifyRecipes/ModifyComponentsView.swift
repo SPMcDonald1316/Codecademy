@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-protocol RecipeComponent {
+protocol RecipeComponent: CustomStringConvertible {
   init()
 }
 
@@ -16,7 +16,7 @@ protocol ModifyComponentView: View {
   init(component: Binding<Component>, createAction: @escaping(Component) -> Void)
 }
 
-struct ModifyComponentsView<Component: RecipeComponent, DestinationView: ModifyComponentView>: View {
+struct ModifyComponentsView<Component: RecipeComponent, DestinationView: ModifyComponentView>: View where DestinationView.Component == Component {
   @Binding var components: [Component]
   @State private var newComponent = Component()
   
