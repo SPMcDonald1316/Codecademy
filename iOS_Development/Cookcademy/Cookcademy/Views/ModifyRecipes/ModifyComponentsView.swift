@@ -11,6 +11,11 @@ protocol RecipeComponent {
   init()
 }
 
+protocol ModifyComponentView: View {
+  associatedtype Component
+  init(component: Binding<Component>, createAction: @escaping(Component) -> Void)
+}
+
 struct ModifyComponentsView: View {
   @Binding var ingredients: [Ingredient]
   @State private var newIngredient = Ingredient()
