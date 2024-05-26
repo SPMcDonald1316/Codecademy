@@ -17,31 +17,37 @@ protocol ModifyComponentView: View {
 }
 
 struct ModifyComponentsView<Component: RecipeComponent, DestinationView: ModifyComponentView>: View {
-  @Binding var ingredients: [Ingredient]
-  @State private var newIngredient = Ingredient()
+  @Binding var components: [Component]
+  @State private var newComponent = Component()
   
   private let listBackgroundColor = AppColor.background
   private let listTextColor = AppColor.foreground
   
   var body: some View {
     VStack {
-      let addIngredientView = ModifyIngredientView(component: $newIngredient) { ingredient in
-        ingredients.append(ingredient)
-        newIngredient = Ingredient()
-      }.navigationTitle("Add Ingredient")
-      if ingredients.isEmpty {
+      let addComponentView = DestinationView(component: $newComponent) { component in
+        components.append(component)
+        newComponent = Component()
+      }.navigationTitle("Add Component")
+      if components.isEmpty {
         Spacer()
-        NavigationLink("Add the first ingredient", destination: addIngredientView)
+        NavigationLink("Add the first component", destination: addComponentView)
         Spacer()
       } else {
+        HStack {
+          Text("Components")
+            .font(.title)
+            .padding()
+          Spacer()
+        }
         List {
-          ForEach(ingredients.indices, id: \.self) { index in
-            let ingredient = ingredients[index]
-            Text(ingredient.description)
+          ForEach(components.indices, id: \.self) { index in
+            let component = components[index]
+            Text(component.description)
           }
           .listRowBackground(listBackgroundColor)
-          NavigationLink("Add another ingredient",
-                         destination: addIngredientView)
+          NavigationLink("Add another component",
+                         destination: addComponentView)
           .buttonStyle(PlainButtonStyle())
           .listRowBackground(listBackgroundColor)
         }.foregroundColor(listTextColor)
@@ -51,8 +57,9 @@ struct ModifyComponentsView<Component: RecipeComponent, DestinationView: ModifyC
 }
 
 #Preview {
+  @State var recipe = Recipe.testRecipes[1]
   @State var emptyIngredients = [Ingredient]()
   return NavigationView {
-    ModifyComponentsView<Ingredient, ModifyIngredientView>(ingredients: $emptyIngredients)
+    ModifyComponentsView<Ingredient, ModifyIngredientView>(components: $recipe.ingredients)
   }
 }
