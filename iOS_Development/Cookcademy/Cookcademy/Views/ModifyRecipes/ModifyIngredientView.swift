@@ -67,6 +67,8 @@ extension NumberFormatter {
 }
 
 #Preview {
-  @State var emptyIngredient = Ingredient()
-  return ModifyIngredientView(ingredient: $emptyIngredient) { ingredient in print(ingredient) }
+  @State var emptyIngredient = Recipe.testRecipes[0].ingredients[0]
+  return NavigationView {
+    ModifyIngredientView(component: $emptyIngredient) { ingredient in print(ingredient) }
+  }.navigationTitle("Add Ingredient")
 }

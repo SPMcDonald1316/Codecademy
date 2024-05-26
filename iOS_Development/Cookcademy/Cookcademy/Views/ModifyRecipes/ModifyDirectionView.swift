@@ -43,6 +43,6 @@ struct ModifyDirectionView: ModifyComponentView {
 #Preview {
   @State var emptyDirection = Direction(description: "", isOptional: false)
   return NavigationView {
-    ModifyDirectionView(direction: $emptyDirection) { _ in return}
+    ModifyDirectionView(component: $emptyDirection) { _ in return}
   }
 }
