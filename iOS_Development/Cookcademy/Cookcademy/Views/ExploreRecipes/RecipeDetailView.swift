@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecipeDetailView: View {
-  let recipe: Recipe
+  @Binding var recipe: Recipe
   
   private let listBackgroundColor = AppColor.background
   private let listTextColor = AppColor.foreground
@@ -52,10 +52,8 @@ struct RecipeDetailView: View {
 }
 
 #Preview {
-  ZStack {
     @State var recipe = Recipe.testRecipes[0]
-    NavigationView {
-      RecipeDetailView(recipe: recipe)
-    }
+    return NavigationView {
+      RecipeDetailView(recipe: $recipe)
   }
 }
