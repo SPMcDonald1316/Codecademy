@@ -22,6 +22,7 @@
 		147D47972BF46F2300589379 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D47962BF46F2300589379 /* RecipeDetailView.swift */; };
 		147D47992BF4765500589379 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D47982BF4765500589379 /* AppColor.swift */; };
 		147D479B2BF4796000589379 /* RecipeCategoryGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147D479A2BF4796000589379 /* RecipeCategoryGridView.swift */; };
+		14FFA3182C04F107004069AA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFA3172C04F107004069AA /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		147D47962BF46F2300589379 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		147D47982BF4765500589379 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		147D479A2BF4796000589379 /* RecipeCategoryGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoryGridView.swift; sourceTree = "<group>"; };
+		14FFA3172C04F107004069AA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				144218D22C04E06C007797D3 /* MainTabView.swift */,
 				143DAB892BF6589500A23E78 /* ModifyRecipes */,
 				143DAB882BF6587500A23E78 /* ExploreRecipes */,
+				14FFA3172C04F107004069AA /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				1406B5992C03D80C007BF4FF /* ModifyDirectionView.swift in Sources */,
 				143DAB8B2BF658EE00A23E78 /* ModifyRecipeView.swift in Sources */,
 				143DAB912BF9B87E00A23E78 /* ModifyComponentsView.swift in Sources */,
+				14FFA3182C04F107004069AA /* SettingsView.swift in Sources */,
 				144218D32C04E06C007797D3 /* MainTabView.swift in Sources */,
 				141147162BF31CD200A11212 /* RecipesListView.swift in Sources */,
 				141147142BF31CD200A11212 /* CookcademyApp.swift in Sources */,
