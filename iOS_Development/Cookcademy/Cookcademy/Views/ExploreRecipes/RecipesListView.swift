@@ -18,47 +18,47 @@ struct RecipesListView: View {
   private let listTextColor = AppColor.foreground
   
   var body: some View {
-    NavigationView {
-      List {
-        ForEach(recipes) { recipe in
-          NavigationLink(recipe.mainInformation.name,
-                         destination: RecipeDetailView(recipe: binding(for: recipe)))
-        }
-        .listRowBackground(listBackgroundColor)
-        .foregroundColor(listTextColor)
+    List {
+      ForEach(recipes) { recipe in
+        NavigationLink(recipe.mainInformation.name,
+                       destination: RecipeDetailView(recipe: binding(for: recipe)))
       }
-      .navigationTitle(navigationTitle)
-      .toolbar(content: {
-        ToolbarItem(placement: .topBarTrailing) {
-          Button(action: {
-            isPresenting = true
-          }, label: {
-            Image(systemName: "plus")
-          })
-        }
-      })
-      .sheet(isPresented: $isPresenting, content: {
-        NavigationView {
-          ModifyRecipeView(recipe: $newRecipe)
-            .toolbar(content: {
-              ToolbarItem(placement: .cancellationAction) {
-                Button("Dismiss") {
+      .listRowBackground(listBackgroundColor)
+      .foregroundColor(listTextColor)
+    }
+    .navigationTitle(navigationTitle)
+    .toolbar(content: {
+      ToolbarItem(placement: .topBarTrailing) {
+        Button(action: {
+          newRecipe = Recipe()
+          newRecipe.mainInformation.category = recipes.first?.mainInformation.category ?? .breakfast
+          isPresenting = true
+        }, label: {
+          Image(systemName: "plus")
+        })
+      }
+    })
+    .sheet(isPresented: $isPresenting, content: {
+      NavigationView {
+        ModifyRecipeView(recipe: $newRecipe)
+          .toolbar(content: {
+            ToolbarItem(placement: .cancellationAction) {
+              Button("Dismiss") {
+                isPresenting = false
+              }
+            }
+            ToolbarItem(placement: .confirmationAction) {
+              if newRecipe.isValid {
+                Button("Add") {
+                  recipeData.add(recipe: newRecipe)
                   isPresenting = false
                 }
               }
-              ToolbarItem(placement: .confirmationAction) {
-                if newRecipe.isValid {
-                  Button("Add") {
-                    recipeData.add(recipe: newRecipe)
-                    isPresenting = false
-                  }
-                }
-              }
-            })
-            .navigationTitle("Add a New Recipe")
-        }
-      })
-    }
+            }
+          })
+          .navigationTitle("Add a New Recipe")
+      }
+    })
   }
 }
 
@@ -97,7 +97,7 @@ extension RecipesListView {
 
 #Preview {
   NavigationView {
-    RecipesListView(category: .breakfast)
+    RecipesListView(viewStyle: .singleCategory(.breakfast))
       .environmentObject(RecipeData())
   }
 }
