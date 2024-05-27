@@ -97,7 +97,6 @@
 				141147152BF31CD200A11212 /* RecipesListView.swift */,
 				147D47962BF46F2300589379 /* RecipeDetailView.swift */,
 				147D479A2BF4796000589379 /* RecipeCategoryGridView.swift */,
-				144218D22C04E06C007797D3 /* MainTabView.swift */,
 			);
 			path = ExploreRecipes;
 			sourceTree = "<group>";
@@ -117,6 +116,7 @@
 		147D47912BF4667B00589379 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				144218D22C04E06C007797D3 /* MainTabView.swift */,
 				143DAB892BF6589500A23E78 /* ModifyRecipes */,
 				143DAB882BF6587500A23E78 /* ExploreRecipes */,
 			);
