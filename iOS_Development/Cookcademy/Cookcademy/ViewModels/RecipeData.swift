@@ -14,6 +14,16 @@ class RecipeData: ObservableObject {
     recipes.filter { $0.isFavorite }
   }
   
+  private var recipesFileURL: URL {
+    do {
+      let documentsDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+      return documentsDirectory.appendingPathComponent("recipeData")
+    }
+    catch {
+      fatalError("An error occurred while getting the url: \(error)")
+    }
+  }
+  
   func recipes(for category: MainInformation.Category) -> [Recipe] {
     var filteredRecipes = [Recipe]()
     for recipe in recipes {
