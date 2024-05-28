@@ -34,6 +34,17 @@ class RecipeData: ObservableObject {
     }
   }
   
+  func loadRecipes() {
+    guard let data = try? Data(contentsOf: recipesFileURL) else { return }
+    do {
+      let savedRecipes = try JSONDecoder().decode([Recipe].self, from: data)
+      recipes = savedRecipes
+    }
+    catch {
+      fatalError("An error occurred while loading recipes: \(error)")
+    }
+  }
+  
   func recipes(for category: MainInformation.Category) -> [Recipe] {
     var filteredRecipes = [Recipe]()
     for recipe in recipes {
