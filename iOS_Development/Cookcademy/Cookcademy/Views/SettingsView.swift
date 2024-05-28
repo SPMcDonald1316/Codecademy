@@ -15,7 +15,7 @@ struct SettingsView: View {
   var body: some View {
     NavigationView {
       Form {
-        ColorPicker("List BackgroundColor", selection: $listBackgroundColor)
+        ColorPicker("List Background Color", selection: $listBackgroundColor)
           .padding()
           .listRowBackground(listBackgroundColor)
         ColorPicker("Text Color", selection: $listTextColor)

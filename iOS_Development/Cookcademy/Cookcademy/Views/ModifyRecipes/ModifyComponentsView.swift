@@ -24,7 +24,7 @@ extension RecipeComponent {
 
 protocol ModifyComponentView: View {
   associatedtype Component
-  init(component: Binding<Component>, createAction: @escaping(Component) -> Void)
+  init(component: Binding<Component>, createAction: @escaping (Component) -> Void)
 }
 
 struct ModifyComponentsView<Component: RecipeComponent, DestinationView: ModifyComponentView>: View where DestinationView.Component == Component {

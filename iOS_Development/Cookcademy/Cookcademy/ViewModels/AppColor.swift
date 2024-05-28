@@ -26,10 +26,7 @@ extension Color: RawRepresentable {
     do {
       let encodedData = rawValue.data(using: .utf8)!
       let components = try JSONDecoder().decode([Double].self, from: encodedData)
-      self = Color(red: components[0],
-                   green: components[1],
-                   blue: components[2],
-                   opacity: components[3])
+      self = Color(red: components[0], green: components[1], blue: components[2], opacity: components[3])
     }
     catch {
       return nil

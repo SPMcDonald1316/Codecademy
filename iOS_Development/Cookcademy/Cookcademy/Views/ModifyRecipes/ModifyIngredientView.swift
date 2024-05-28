@@ -20,6 +20,7 @@ struct ModifyIngredientView: ModifyComponentView {
   @AppStorage("listTextColor") private var listTextColor = AppColor.foreground
   
   @Environment(\.presentationMode) private var mode
+  @EnvironmentObject private var recipeData: RecipeData
   
   var body: some View {
     Form {
@@ -34,8 +35,7 @@ struct ModifyIngredientView: ModifyComponentView {
           .keyboardType(.numbersAndPunctuation)
         }
       }.listRowBackground(listBackgroundColor)
-      Picker(selection: $ingredient.unit, label:
-              HStack {
+      Picker(selection: $ingredient.unit, label: HStack {
         Text("Unit")
         Spacer()
         Text(ingredient.unit.rawValue)

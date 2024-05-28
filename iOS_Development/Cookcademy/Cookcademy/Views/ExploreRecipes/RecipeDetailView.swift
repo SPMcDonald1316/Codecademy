@@ -10,6 +10,7 @@ import SwiftUI
 struct RecipeDetailView: View {
   @Binding var recipe: Recipe
   @State private var isPresenting = false
+  @EnvironmentObject private var recipeData: RecipeData
   
   @AppStorage("listBackgroundColor") private var listBackgroundColor = AppColor.background
   @AppStorage("listTextColor") private var listTextColor = AppColor.foreground
@@ -25,7 +26,7 @@ struct RecipeDetailView: View {
       }
       HStack {
         Text(recipe.mainInformation.description)
-          .font(.subheadline)
+          .font(.body)
           .padding()
         Spacer()
       }
@@ -44,9 +45,9 @@ struct RecipeDetailView: View {
               EmptyView()
             } else {
               HStack {
+                let index = recipe.index(of: direction, excludingOptionalDirections: hideOptionalSteps) ?? 0
                 Text("\(index + 1). ").bold()
-                Text("\(direction.isOptional ? "(Optional) " : "" )"
-                     + "\(direction.description)")
+                Text("\(direction.isOptional ? "(Optional) " : "")\(direction.description)")
               }.foregroundColor(listTextColor)
             }
           }

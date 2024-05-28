@@ -12,6 +12,7 @@ struct ModifyMainInformationView: View {
   @AppStorage("listTextColor") private var listTextColor = AppColor.foreground
   
   @Binding var mainInformation: MainInformation
+  @EnvironmentObject private var recipeData: RecipeData
   
   var body: some View {
     Form {
@@ -29,15 +30,14 @@ struct ModifyMainInformationView: View {
                 Spacer()
                 Text(mainInformation.category.rawValue)
               }) {
-        ForEach(MainInformation.Category.allCases,
-                id: \.self) {category in
-          Text(category.rawValue)
-        }
+                  ForEach(MainInformation.Category.allCases, id: \.self) {category in
+                    Text(category.rawValue)
+                  }
               }
               .listRowBackground(listBackgroundColor)
               .pickerStyle(MenuPickerStyle())
-    }
-    .foregroundColor(listTextColor)
+      }
+      .foregroundColor(listTextColor)
   }
 }
 

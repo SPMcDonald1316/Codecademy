@@ -20,6 +20,7 @@ struct ModifyDirectionView: ModifyComponentView {
   @AppStorage("listTextColor") private var listTextColor = AppColor.foreground
   
   @Environment(\.presentationMode) private var mode
+  @EnvironmentObject private var recipeData: RecipeData
   
   var body: some View {
     Form {
@@ -41,8 +42,8 @@ struct ModifyDirectionView: ModifyComponentView {
 }
 
 #Preview {
-  @State var emptyDirection = Direction()
+  @State var recipe = Recipe.testRecipes[0]
   return NavigationView {
-    ModifyDirectionView(component: $emptyDirection) { _ in return}
+    ModifyDirectionView(component: $recipe.directions[0]) { direction in print(direction) }
   }
 }

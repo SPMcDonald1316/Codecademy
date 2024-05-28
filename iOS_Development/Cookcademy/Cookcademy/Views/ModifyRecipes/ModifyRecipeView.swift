@@ -39,3 +39,8 @@ struct ModifyRecipeView: View {
     case directions
   }
 }
+
+#Preview {
+  @State var recipe = Recipe()
+  return ModifyRecipeView(recipe: $recipe)
+}
