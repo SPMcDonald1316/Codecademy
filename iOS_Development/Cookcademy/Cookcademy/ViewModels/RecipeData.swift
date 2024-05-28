@@ -24,6 +24,16 @@ class RecipeData: ObservableObject {
     }
   }
   
+  func saveRecipes() {
+    do {
+      let encodedData = try JSONEncoder().encode(recipes)
+      try encodedData.write(to: recipesFileURL)
+    }
+    catch {
+      fatalError("An error occurred while saving recipes: \(error)")
+    }
+  }
+  
   func recipes(for category: MainInformation.Category) -> [Recipe] {
     var filteredRecipes = [Recipe]()
     for recipe in recipes {
